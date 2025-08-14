@@ -44,20 +44,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - MHTBYGG AB</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body class="bg-gray-100 font-sans">
     <!-- Navigation -->
     <nav class="bg-blue-800 text-white p-4 sticky top-0 z-10">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="flex items-center text-2xl" style="font: 28px 'Prociono', serif; font-weight: normal;">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center text-2xl"
+                style="font: 28px 'Prociono', serif; font-weight: normal;">
                 <img src="images/logo.png" alt="MHTBYGG Logo" class="h-8 w-auto mr-2">
                 MHTBYGG AB
             </a>
-            <ul class="flex space-x-6">
-                <li><a href="index.html" class="hover:text-blue-300">Hem</a></li>
-                <li><a href="about.html" class="hover:text-blue-300">Om Oss</a></li>
-                <li><a href="contact.html" class="hover:text-blue-300">Kontakt</a></li>
-                <li><a href="blog.html" class="hover:text-blue-300">Blogg</a></li>
+
+            <!-- Hamburger Button (mobile only) -->
+            <button id="menu-btn" class="sm:hidden flex flex-col space-y-1 focus:outline-none">
+                <span class="block w-6 h-0.5 bg-white"></span>
+                <span class="block w-6 h-0.5 bg-white"></span>
+                <span class="block w-6 h-0.5 bg-white"></span>
+            </button>
+
+            <!-- Menu Links -->
+            <ul id="menu"
+                class="hidden sm:flex space-x-6 flex-col sm:flex-row sm:space-x-6 sm:space-y-0 absolute sm:static top-16 left-0 w-full sm:w-auto bg-blue-800 sm:bg-transparent p-4 sm:p-0">
+                <li><a href="index.html" class="block py-2 hover:text-blue-300">Hem</a></li>
+                <li><a href="about.html" class="block py-2 hover:text-blue-300">Om Oss</a></li>
+                <li><a href="contact.html" class="block py-2 hover:text-blue-300">Kontakt</a></li>
+                <li><a href="blog.html" class="block py-2 hover:text-blue-300">Blogg</a></li>
             </ul>
         </div>
     </nav>
